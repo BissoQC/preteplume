@@ -1,103 +1,38 @@
-# preteplume #
+# Prête-moi ta plume
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bientôt en ligne</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            background-image: url('keyboard.jpg');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            color: white;
-            text-align: center;
-        }
+Bienvenue dans le repository du site web **Prête-moi ta plume** ! Ce projet est en cours de développement et vise à offrir une plateforme conviviale pour les services proposés par **BissoQc**.
 
-        header {
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 1em 0;
-            position: sticky;
-            top: 0;
-            width: 100%;
-        }
+## Contenu du site
 
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
+### Header
+Le site contient un en-tête avec un menu de navigation permettant d'accéder facilement à trois sections principales :
+- **Section 1**
+- **Section 2**
+- **Section 3**
 
-        nav ul li {
-            display: inline;
-        }
+### Footer
+Un pied de page simple mais efficace indique les droits d'auteur :
+> &copy; 2024 - Tous droits réservés. Propriété de BissoQc.
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.2em;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
+### Main
+La page d'accueil affiche un message accueillant les visiteurs :
+> "Bienvenue sur notre site en cours de construction. Revenez bientôt pour découvrir notre contenu !"
 
-        nav ul li a:hover {
-            color: #FFD700;
-        }
+## Structure des fichiers
+- **index.html** : Le fichier principal contenant le code HTML du site.
+- **README.md** : Ce fichier descriptif détaillant le projet.
 
-        h1 {
-            font-size: 3em;
-            font-weight: bold;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-        }
+## Déploiement
+Pour déployer ce site, vous pouvez :
+1. Cloner le repository :
+   ```bash
+   git clone https://github.com/votre-utilisateur/votre-repository.git
+   ```
+2. Uploader les fichiers sur votre serveur d'hébergement (par exemple GoDaddy).
+3. Assurez-vous que `index.html` est bien à la racine du répertoire public.
 
-        p {
-            font-size: 1.5em;
-            font-weight: 300;
-            text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.7);
-        }
+## Contribution
+Les contributions sont les bienvenues ! Si vous souhaitez proposer des modifications ou signaler des problèmes, ouvrez une **issue** ou une **pull request**.
 
-        footer {
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 1em 0;
-            color: white;
-            text-align: center;
-            font-size: 0.9em;
-        }
-
-    </style>
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#services">Mes services</a></li>
-                <li><a href="#about">Qui est BissoQc</a></li>
-                <li><a href="#examples">Exemples</a></li>
-                <li><a href="#order">Commandez votre texte!</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <div>
-            <h1>Bientôt en ligne</h1>
-            <p>Nous travaillons actuellement sur votre site web !</p>
-        </div>
-    </main>
-
-    <footer>
-        &copy; 2024 - 2025 Tous droits réservés. Propriété de BissoQc.
-    </footer>
-</body>
-</html>
+## Droits d'auteur
+&copy; 2024 - Tous droits réservés. Propriété de **BissoQc**.
