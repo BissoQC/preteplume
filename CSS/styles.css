@@ -95,7 +95,7 @@ main {
 }
 
 .hero {
-    background-image: url('../Images/herobackground.png'); /* Remplace la couleur par l'image */
+    background-image: url('../images/herobackground.png'); /* Remplace la couleur par l'image */
     background-size: cover; /* Pour que l'image couvre toute la section */
     background-position: center; /* Pour centrer l'image */
     color: #fff;
@@ -108,12 +108,18 @@ main {
 .hero h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    border: 5px solid #000; /* Ajout d'une bordure noire épaisse */
+    padding: 1rem; /* Ajout dePadding autour du texte pour l'espace */
+    display: inline-block; /* Pour que la bordure s'adapte au contenu */
 }
 
 .hero p {
     font-size: 1.1rem;
     max-width: 800px;
     margin: 0 auto;
+    border: 5px solid #000; /* Ajout d'une bordure noire épaisse */
+    padding: 1rem; /* Ajout dePadding autour du texte pour l'espace */
+    display: inline-block; /* Pour que la bordure s'adapte au contenu */
 }
 
 .book-section {
