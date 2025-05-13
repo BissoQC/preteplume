@@ -31,7 +31,7 @@ header {
 }
 
 .logo-container img {
-    max-height: 30px; /* Ajustez la hauteur selon la taille de votre logo */
+    max-height: 40px; /* Augmentation de la hauteur maximale du logo */
     margin-right: 10px; /* Espacement entre le logo et le texte */
 }
 
