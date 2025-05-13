@@ -13,7 +13,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    /* Fond par défaut (pour bureau) - Remplacez par le chemin de votre image de bureau */
+    /* Fond par défaut (pour bureau) - Vérifiez ce chemin! */
     background: linear-gradient(to bottom, #ffffff, #f0f0f0), url('../Images/sitebackground-desktop.png') no-repeat center center/cover;
 }
 
@@ -234,10 +234,10 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Media Query pour les écrans de petite taille (mobiles) */
+/* Media Query pour les écrans de petite taille (mobiles) - DOIT VENIR APRÈS LA RÈGLE BODY PAR DÉFAUT */
 @media (max-width: 1000px) {
     body {
-        /* Fond pour mobile - Remplacez par le chemin de votre image mobile */
+        /* Fond pour mobile - Vérifiez ce chemin! */
         background: linear-gradient(to bottom, #ffffff, #f0f0f0), url('../Images/sitebackground-mobile.png') no-repeat center center/cover;
     }
 
