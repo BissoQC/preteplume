@@ -109,19 +109,23 @@ main {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     text-shadow:
-        -2px -2px 0 #000, /* Bordure plus épaisse */
-        2px -2px 0 #000, /* Bordure plus épaisse */
-        -2px 2px 0 #000, /* Bordure plus épaisse */
-        2px 2px 0 #000; /* Bordure plus épaisse */
-    color: #fff; /* Retour aux lettres blanches */
+        -2px -2px 0 #000, /* Bordure plus épaisse pour le titre */
+        2px -2px 0 #000, /* Bordure plus épaisse pour le titre */
+        -2px 2px 0 #000, /* Bordure plus épaisse pour le titre */
+        2px 2px 0 #000; /* Bordure plus épaisse pour le titre */
+    color: #fff; /* Lettres blanches pour le titre */
 }
 
 .hero p {
     font-size: 1.1rem;
     max-width: 800px;
     margin: 0 auto;
-    /* Suppression du text-shadow (contour noir) */
-    color: #000; /* Changement pour des lettres noires */
+    text-shadow:
+        -1px -1px 0 #000, /* Bordure plus fine pour le paragraphe */
+        1px -1px 0 #000, /* Bordure plus fine pour le paragraphe */
+        -1px 1px 0 #000, /* Bordure plus fine pour le paragraphe */
+        1px 1px 0 #000; /* Bordure plus fine pour le paragraphe */
+    color: #fff; /* Lettres blanches pour le paragraphe */
 }
 
 .book-section {
