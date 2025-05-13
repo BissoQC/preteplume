@@ -1,42 +1,81 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BissoQc - Des histoires magiques toutes en rimes pour faire rêver les petits ( et les moyens ;) )!</title>
-    <link rel="stylesheet" href="./CSS/styles.css">
+    <title>BissoQc - Découvrez nos histoires magiques !</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <header>
+        <div class="logo">BissoQc</div>
         <nav>
-            <div class="logo">BissoQc</div>
-            <button class="hamburger-menu">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </button>
-            <ul class="nav-links">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="#section1">À propos de BissoQc</a></li>
-                <li><a href="livres.html">Commander un livre</a></li>
-                <li><a href="#section3">Donations</a></li>
-                <li><a href="#section3">Reviews</a></li>
+            <ul>
+                <li><a href="#livre1">Livre 1</a></li>
+                <li><a href="#livre2">Livre 2</a></li>
+                <li><a href="#a-propos">À Propos</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <button class="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
     </header>
 
     <main>
-        <h1>BissoQC - Livres pour enfants</h1>
-        <p>Découvrez l'univers fascinant de l'auteur québécois Éric Bissonnette, aussi connu sous le nom de BissoQc, dans des histoires pour enfants rimées, rythmées et pleines de bonté!</p>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Des histoires qui enchantent petits et grands</h1>
+                <p>Plongez dans des mondes imaginaires et découvrez des aventures inoubliables.</p>
+            </div>
+        </section>
+
+        <section id="livre1" class="book-section">
+            <div class="book-cover">
+                <img src="images/couverture_livre_1.jpg" alt="Couverture du Livre 1">
+            </div>
+            <div class="book-info">
+                <h2>Titre du Livre 1</h2>
+                <p class="tagline">Accroche percutante du livre 1.</p>
+                <p>Court résumé captivant du livre 1 pour donner envie de lire.</p>
+                <a href="VOTRE_LIEN_AMAZON_LIVRE_1" target="_blank" class="amazon-button">Voir sur Amazon</a>
+            </div>
+        </section>
+
+        <section id="livre2" class="book-section alternate">
+            <div class="book-cover">
+                <img src="images/couverture_livre_2.jpg" alt="Couverture du Livre 2">
+            </div>
+            <div class="book-info">
+                <h2>Titre du Livre 2</h2>
+                <p class="tagline">Accroche percutante du livre 2.</p>
+                <p>Court résumé captivant du livre 2 pour donner envie de lire.</p>
+                <a href="VOTRE_LIEN_AMAZON_LIVRE_2" target="_blank" class="amazon-button">Voir sur Amazon</a>
+            </div>
+        </section>
+
+        <section id="a-propos" class="about-section">
+            <h2>À Propos de BissoQc</h2>
+            <p>Quelques mots sur vous, votre passion pour l'écriture, votre inspiration, etc.</p>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Contactez-nous</h2>
+            <p>Si vous avez des questions, n'hésitez pas à nous contacter via ce formulaire ou nos réseaux sociaux.</p>
+            <form>
+                <input type="email" placeholder="Votre email">
+                <textarea placeholder="Votre message"></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
     </main>
 
     <footer>
-        &copy; 2024 - Tous droits réservés. Propriété de <a href="#">BissoQc</a>.
+        <p>&copy; 2025 BissoQc. Tous droits réservés.</p>
     </footer>
 
-    <script src="./script.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
