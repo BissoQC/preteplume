@@ -235,7 +235,7 @@ footer a:hover {
 }
 
 /* Media Query pour les écrans de petite taille (mobiles) */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     body {
         /* Fond pour mobile - Remplacez par le chemin de votre image mobile */
         background: linear-gradient(to bottom, #ffffff, #f0f0f0), url('../Images/sitebackground-mobile.png') no-repeat center center/cover;
