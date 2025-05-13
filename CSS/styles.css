@@ -93,6 +93,21 @@ h1 {
         1px 0 0 #000,
         0 -1px 0 #000,
         0 1px 0 #000; /* Ajoute une ombre noire épaisse autour du texte */
+    position: relative; /* Needed for absolute positioning of the background */
+}
+
+h1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.1); /* White with 10% opacity */
+    z-index: -1; /* Place behind the text */
+    padding: 0.5rem; /* Add some padding around the text */
+    margin: -0.5rem; /* Adjust margin to cover the padding */
+    border-radius: 5px; /* Optional: Add rounded corners */
 }
 
 p {
@@ -109,6 +124,21 @@ p {
         1px 0 0 #000,
         0 -1px 0 #000,
         0 1px 0 #000; /* Ajoute une ombre noire épaisse autour du texte */
+    position: relative; /* Needed for absolute positioning of the background */
+}
+
+p::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.1); /* White with 10% opacity */
+    z-index: -1; /* Place behind the text */
+    padding: 0.5rem; /* Add some padding around the text */
+    margin: -0.5rem; /* Adjust margin to cover the padding */
+    border-radius: 5px; /* Optional: Add rounded corners */
 }
 
 /* Footer moderne */
