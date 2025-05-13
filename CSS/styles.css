@@ -95,9 +95,9 @@ main {
 }
 
 .hero {
-    background-image: url('../Images/herobackground.png'); /* Remplace la couleur par l'image */
-    background-size: cover; /* Pour que l'image couvre toute la section */
-    background-position: center; /* Pour centrer l'image */
+    background-image: url('../images/herobackground.png'); /* Image par défaut (pour mobile) */
+    background-size: cover;
+    background-position: center;
     color: #fff;
     padding: 4rem 2rem;
     text-align: center;
@@ -239,65 +239,14 @@ footer {
 }
 
 /* RESPONSIVE DESIGN */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
+@media (min-width: 1500px) { /* Appliquer ces styles pour les écrans plus larges que 1499px */
+    .hero {
+        background-image: url('../images/herobanner.png'); /* Image pour les écrans non-mobiles */
     }
+}
 
-    .header-content {
-        flex-direction: row; /* Aligner le logo et le burger sur la même ligne */
-        justify-content: space-between; /* Espacer le logo/texte et le burger */
-        width: 100%;
-    }
-
-    .logo-container {
-        margin-right: auto; /* Pousser le logo vers la gauche */
-    }
-
-    nav {
-        width: 100%;
-        margin-top: 1rem;
-        display: none;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    nav li {
-        width: 100%;
-        text-align: center;
-        padding: 0.5rem 0;
-        border-bottom: 1px solid #555;
-    }
-
-    nav li:last-child {
-        border-bottom: none;
-    }
-
-    nav.active {
-        display: block;
-    }
-
-    .hamburger-menu {
-        display: flex;
-        /* Les positions sont gérées par header et header-content */
-    }
-
-    .book-section {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .book-section.alternate {
-        flex-direction: column;
-    }
-
-    .book-cover {
-        margin-bottom: 1rem;
+@media (max-width: 1499px) { /* Appliquer ces styles pour les écrans jusqu'à 1499px (mobiles et tablettes) */
+    .hero {
+        background-image: url('../images/herobackground.png'); /* Image pour les écrans mobiles et la plupart des tablettes */
     }
 }
