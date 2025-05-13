@@ -31,7 +31,7 @@ header {
 }
 
 .logo-container img {
-    max-height: 60px; /* Augmentation de la hauteur maximale du logo */
+    max-height: 40px; /* Augmentation de la hauteur maximale du logo */
     margin-right: 10px; /* Espacement entre le logo et le texte */
 }
 
@@ -95,7 +95,9 @@ main {
 }
 
 .hero {
-    background-color: #000; /* Changement ici: noir */
+    background-image: url('../images/herobackground.png'); /* Remplace la couleur par l'image */
+    background-size: cover; /* Pour que l'image couvre toute la section */
+    background-position: center; /* Pour centrer l'image */
     color: #fff;
     padding: 4rem 2rem;
     text-align: center;
