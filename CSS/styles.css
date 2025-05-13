@@ -95,7 +95,7 @@ main {
 }
 
 .hero {
-    background-color: #34495e;
+    background-color: #000; /* Changement ici: noir */
     color: #fff;
     padding: 4rem 2rem;
     text-align: center;
