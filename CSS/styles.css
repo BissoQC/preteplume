@@ -234,8 +234,8 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Media Query pour les écrans de petite taille (mobiles) - DOIT VENIR APRÈS LA RÈGLE BODY PAR DÉFAUT */
-@media (max-width: 1000px) {
+/* Media Query pour les écrans de petite taille (mobiles) */
+@media (max-width: 1400px) { /* Augmentation de la max-width pour inclure l'iPhone 16 Pro Max en portrait */
     body {
         /* Fond pour mobile - Vérifiez ce chemin! */
         background: linear-gradient(to bottom, #ffffff, #f0f0f0), url('../Images/sitebackground-mobile.png') no-repeat center center/cover;
