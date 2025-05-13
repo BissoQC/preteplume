@@ -209,6 +209,23 @@ footer a:hover {
 @media (max-width: 768px) {
     main {
         background-position: left center; /* Aligne le côté gauche de l'image */
-        background-size: 200% auto; /* Double la largeur pour montrer la moitié gauche */
+        background-size: cover; /* Redimensionne pour couvrir tout l'élément */
+        min-height: 100vh; /* Assure que main occupe au moins la hauteur de l'écran */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centre le contenu verticalement */
+    }
+
+    /* Ajustement pour éviter que le padding de main ne crée des espaces */
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* S'assure que le body occupe toute la hauteur */
+    }
+
+    /* Optionnel : Si vous avez d'autres éléments dans main qui causent un décalage */
+    main > * {
+        margin-top: auto;
+        margin-bottom: auto;
     }
 }
