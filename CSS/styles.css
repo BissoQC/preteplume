@@ -204,3 +204,11 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+/* Media Query pour les écrans de petite taille (mobiles) */
+@media (max-width: 768px) {
+    main {
+        background-position: left center; /* Aligne le côté gauche de l'image */
+        background-size: 200% auto; /* Double la largeur pour montrer la moitié gauche */
+    }
+}
