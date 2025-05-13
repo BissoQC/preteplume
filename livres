@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Livres - BissoQc</title>
+    <link rel="stylesheet" href="./CSS/styles.css"> </head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="#section1">À propos de BissoQc</a></li>
+                <li><a href="#section3">Donations</a></li>
+                <li><a href="#section3">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Nos Livres</h1>
+        <div class="book-list">
+            <div class="book-item">
+                <h3>Titre du Livre 1</h3>
+                <a href="VOTRE_LIEN_AMAZON_LIVRE_1" target="_blank">
+                    <img src="./Images/couverture_livre_1.jpg" alt="Couverture du Livre 1" width="150">
+                </a>
+                <p>Courte description du livre 1.</p>
+                <a href="VOTRE_LIEN_AMAZON_LIVRE_1" target="_blank">Acheter sur Amazon</a>
+            </div>
+
+            <div class="book-item">
+                <h3>Titre du Livre 2</h3>
+                <a href="VOTRE_LIEN_AMAZON_LIVRE_2" target="_blank">
+                    <img src="./Images/couverture_livre_2.jpg" alt="Couverture du Livre 2" width="150">
+                </a>
+                <p>Courte description du livre 2.</p>
+                <a href="VOTRE_LIEN_AMAZON_LIVRE_2" target="_blank">Acheter sur Amazon</a>
+            </div>
+
+            </div>
+    </main>
+
+    <footer>
+        &copy; 2024 - Tous droits réservés. Propriété de <a href="#">BissoQc</a>.
+    </footer>
+</body>
+</html>
