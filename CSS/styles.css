@@ -235,9 +235,14 @@ footer a:hover {
 @media (max-width: 768px) {
     nav {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start; /* Aligne les éléments à gauche */
         align-items: center;
         padding: 0 1rem;
+        gap: 1rem; /* Espace entre le logo et le burger */
+    }
+
+    .logo {
+        margin-right: auto; /* Pousse le logo vers la gauche */
     }
 
     .nav-links {
