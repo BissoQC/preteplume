@@ -1,17 +1,26 @@
 const hamburgerMenu = document.querySelector('.hamburger-menu');
-const navLinks = document.querySelector('.nav-links');
+const nav = document.querySelector('nav');
 
-if (hamburgerMenu && navLinks) {
+if (hamburgerMenu && nav) {
     hamburgerMenu.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
+        nav.classList.toggle('active');
         hamburgerMenu.classList.toggle('active');
     });
-
-    // Optionnel : Fermer le menu lorsqu'un lien est cliqué (peut être souhaitable)
-    navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-            hamburgerMenu.classList.remove('active');
-        });
-    });
 }
+
+// Smooth scrolling pour les liens de navigation (optionnel)
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+
+        // Fermer le menu sur mobile après avoir cliqué sur un lien
+        if (window.innerWidth <= 768) {
+            nav.classList.remove('active');
+            hamburgerMenu.classList.remove('active');
+        }
+    });
+});
