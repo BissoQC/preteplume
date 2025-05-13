@@ -9,11 +9,12 @@ body {
     font-family: 'Roboto', Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
-    background: linear-gradient(to bottom, #ffffff, #f0f0f0);
     color: #333;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    /* Fond par défaut (pour bureau) - Remplacez par le chemin de votre image de bureau */
+    background: linear-gradient(to bottom, #ffffff, #f0f0f0), url('../Images/sitebackground-desktop.png') no-repeat center center/cover;
 }
 
 /* Header moderne */
@@ -31,19 +32,21 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    padding: 0 1rem; /* Ajout de padding pour espacement */
+    padding: 0 1rem;
+    gap: 1rem;
 }
 
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
     color: #ecf0f1;
+    margin-right: auto;
 }
 
 .hamburger-menu {
-    display: none; /* Caché par défaut sur les écrans plus larges */
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
@@ -83,12 +86,11 @@ nav {
     color: #f1c40f;
 }
 
-/* Section principale (index.html) */
+/* Section principale (index.html et livres.html) */
 main {
     flex: 1;
     padding: 2rem;
     text-align: center;
-    background: url('../Images/sitebackground.png') no-repeat left center/cover;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -103,13 +105,14 @@ main {
         1px 0 0 #000,
         0 -1px 0 #000,
         0 1px 0 #000; /* Ajoute une ombre noire épaisse autour du texte */
-    min-height: 100vh; /* Pour que l'arrière-plan couvre la hauteur sur mobile */
+    min-height: 100vh;
+    background: transparent; /* L'arrière-plan est géré par le body */
 }
 
 main h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: #fff; /* Le titre h1 sera blanc */
+    color: #fff;
     text-shadow:
         -2px -2px 0 #000,
         2px -2px 0 #000,
@@ -118,8 +121,8 @@ main h1 {
         -1px 0 0 #000,
         1px 0 0 #000,
         0 -1px 0 #000,
-        0 1px 0 #000; /* Ajoute une ombre noire épaisse autour du texte */
-    position: relative; /* Needed for absolute positioning of the background */
+        0 1px 0 #000;
+    position: relative;
 }
 
 main h1::before {
@@ -129,18 +132,18 @@ main h1::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(255, 255, 255, 0.1); /* White with 10% opacity */
-    z-index: -1; /* Place behind the text */
-    padding: 0.5rem; /* Add some padding around the text */
-    margin: -0.5rem; /* Adjust margin to cover the padding */
-    border-radius: 5px; /* Optional: Add rounded corners */
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: -1;
+    padding: 0.5rem;
+    margin: -0.5rem;
+    border-radius: 5px;
 }
 
 main p {
     font-size: 1.2rem;
     max-width: 800px;
     margin: 0 auto;
-    color: #fff; /* Le paragraphe p sera blanc */
+    color: #fff;
     text-shadow:
         -2px -2px 0 #000,
         2px -2px 0 #000,
@@ -149,8 +152,8 @@ main p {
         -1px 0 0 #000,
         1px 0 0 #000,
         0 -1px 0 #000,
-        0 1px 0 #000; /* Ajoute une ombre noire épaisse autour du texte */
-    position: relative; /* Needed for absolute positioning of the background */
+        0 1px 0 #000;
+    position: relative;
 }
 
 main p::before {
@@ -160,17 +163,17 @@ main p::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(255, 255, 255, 0.1); /* White with 10% opacity */
-    z-index: -1; /* Place behind the text */
-    padding: 0.5rem; /* Add some padding around the text */
-    margin: -0.5rem; /* Adjust margin to cover the padding */
-    border-radius: 5px; /* Optional: Add rounded corners */
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: -1;
+    padding: 0.5rem;
+    margin: -0.5rem;
+    border-radius: 5px;
 }
 
 /* Styles pour la page des livres (livres.html) */
 .book-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Crée une grille responsive */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     padding: 2rem;
 }
@@ -233,50 +236,13 @@ footer a:hover {
 
 /* Media Query pour les écrans de petite taille (mobiles) */
 @media (max-width: 768px) {
-    nav {
-        display: flex;
-        justify-content: flex-start; /* Aligne les éléments à gauche */
-        align-items: center;
-        padding: 0 1rem;
-        gap: 1rem; /* Espace entre le logo et le burger */
-    }
-
-    .logo {
-        margin-right: auto; /* Pousse le logo vers la gauche */
-    }
-
-    .nav-links {
-        display: none; /* Cache la navigation par défaut sur mobile */
-        position: absolute;
-        top: 60px; /* Ajustez en fonction de la hauteur de votre header */
-        left: 0;
-        background-color: #2c3e50;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem 0;
-        gap: 1rem;
-        z-index: 1001; /* Au-dessus du contenu principal */
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    .nav-links.active {
-        display: flex; /* Affiche la navigation lorsque le menu est actif */
-    }
-
-    .nav-links li {
-        display: block;
-        width: 100%;
-        text-align: center;
-        padding: 0.5rem 0;
+    body {
+        /* Fond pour mobile - Remplacez par le chemin de votre image mobile */
+        background: linear-gradient(to bottom, #ffffff, #f0f0f0), url('../Images/sitebackground-mobile.png') no-repeat center center/cover;
     }
 
     .hamburger-menu {
-        display: flex; /* Affiche le menu hamburger sur mobile */
-    }
-
-    main {
-        background-size: cover; /* Redimensionne pour couvrir tout l'élément */
+        display: flex;
     }
 }
 
