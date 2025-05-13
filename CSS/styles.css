@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: #2c3e50;
+    background-color: #000; /* Changement ici: noir */
     color: #fff;
     padding: 1rem 2rem;
     display: flex;
@@ -219,7 +219,7 @@ main {
 }
 
 footer {
-    background-color: #333;
+    background-color: #000; /* Changement ici: noir */
     color: #fff;
     text-align: center;
     padding: 1rem 0;
