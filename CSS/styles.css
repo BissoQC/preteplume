@@ -95,7 +95,7 @@ main {
 }
 
 .hero {
-    background-image: url('../Images/herobackground.png'); /* Chemin corrigé */
+    background-image: url('../Images/herobackground.png'); /* Image par défaut */
     background-size: cover;
     background-position: center;
     color: #fff; /* Couleur du texte par défaut */
