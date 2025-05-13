@@ -18,7 +18,24 @@ header {
     z-index: 100;
 }
 
-.logo {
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Maintenir l'espace entre le logo et la nav sur grand écran */
+    width: 100%; /* Assurer que le contenu prend toute la largeur */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    max-height: 30px; /* Ajustez la hauteur selon la taille de votre logo */
+    margin-right: 10px; /* Espacement entre le logo et le texte */
+}
+
+.logo-text {
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -216,6 +233,16 @@ footer {
         align-items: flex-start;
     }
 
+    .header-content {
+        flex-direction: row; /* Aligner le logo et le burger sur la même ligne */
+        justify-content: space-between; /* Espacer le logo/texte et le burger */
+        width: 100%;
+    }
+
+    .logo-container {
+        margin-right: auto; /* Pousser le logo vers la gauche */
+    }
+
     nav {
         width: 100%;
         margin-top: 1rem;
@@ -245,9 +272,7 @@ footer {
 
     .hamburger-menu {
         display: flex;
-        position: absolute;
-        top: 1rem;
-        right: 2rem;
+        /* Les positions sont gérées par header et header-content */
     }
 
     .book-section {
