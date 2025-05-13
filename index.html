@@ -3,12 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Votre Titre</title>
+    <title>Prêteplume</title>
     <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
     <header>
-        </header>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="Images/logo.png" alt="Logo Prêteplume">
+                <span class="logo-text">Prêteplume</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#livres">Livres</a></li>
+                    <li><a href="#apropos">À Propos</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </button>
+        </div>
+    </header>
 
     <main>
         <section class="hero">
@@ -16,29 +35,57 @@
             <p>Plongez dans des mondes imaginaires et découvrez des aventures inoubliables.</p>
         </section>
 
-        <section class="book-section">
-            </section>
+        <section class="book-section" id="livres">
+            <div class="book-cover">
+                <img src="Images/book1_cover.jpg" alt="Couverture du Livre 1">
+            </div>
+            <div class="book-info">
+                <h2>Le Mystère de la Forêt Enchantée</h2>
+                <p class="tagline">Une aventure palpitante pour les jeunes détectives.</p>
+                <p>Suivez Léa et Tom à travers une forêt magique remplie d'énigmes et de créatures fantastiques alors qu'ils tentent de résoudre un mystère ancestral.</p>
+                <a href="https://www.amazon.com/dp/B0XXXXXXXX" class="amazon-button" target="_blank">Acheter sur Amazon</a>
+            </div>
+        </section>
 
         <section class="book-section alternate">
-            </section>
+            <div class="book-cover">
+                <img src="Images/book2_cover.jpg" alt="Couverture du Livre 2">
+            </div>
+            <div class="book-info">
+                <h2>Les Explorateurs de l'Espace Perdu</h2>
+                <p class="tagline">Un voyage interstellaire plein de découvertes.</p>
+                <p>Embarquez avec Max et Luna à bord du vaisseau spatial Nova pour explorer des planètes inconnues, rencontrer des extraterrestres amicaux et surmonter des défis cosmiques.</p>
+                <a href="https://www.amazon.com/dp/B0YYYYYYYY" class="amazon-button" target="_blank">Acheter sur Amazon</a>
+            </div>
+        </section>
 
-        <section class="book-section">
-            </section>
+        <section class="about-section" id="apropos">
+            <h2>À Propos de l'Auteur</h2>
+            <p>Ici, vous pouvez ajouter une courte biographie de l'auteur et votre inspiration pour ces histoires.</p>
+        </section>
 
-        <section class="book-section alternate">
-            </section>
-
-        <section class="book-section">
-            </section>
-
-        <section class="about-section">
-            </section>
-
-        <section class="contact-section">
-            </section>
+        <section class="contact-section" id="contact">
+            <h2>Contactez-moi</h2>
+            <form>
+                <input type="email" placeholder="Votre email">
+                <textarea placeholder="Votre message"></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
     </main>
 
     <footer>
-        </footer>
+        <p>&copy; 2025 Prêteplume. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        const nav = document.querySelector('nav ul');
+
+        hamburgerMenu.addEventListener('click', () => {
+            hamburgerMenu.classList.toggle('active');
+            nav.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
