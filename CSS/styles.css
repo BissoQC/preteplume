@@ -95,10 +95,10 @@ main {
 }
 
 .hero {
-    background-image: url('../Images/herobackground.png'); /* Image par défaut (pour mobile) */
+    background-image: url('../images/herobackground.png'); /* Image par défaut (pour mobile) */
     background-size: cover;
     background-position: center;
-    color: #fff;
+    color: #fff; /* Couleur du texte par défaut (sera surchargée ci-dessous) */
     padding: 4rem 2rem;
     text-align: center;
     border-radius: 8px;
@@ -113,6 +113,7 @@ main {
         1px -1px 0 #000,
         -1px 1px 0 #000,
         1px 1px 0 #000; /* Contour noir autour du texte */
+    color: #000; /* Changement ici: noir */
 }
 
 .hero p {
@@ -124,6 +125,7 @@ main {
         1px -1px 0 #000,
         -1px 1px 0 #000,
         1px 1px 0 #000; /* Contour noir autour du texte */
+    color: #000; /* Changement ici: noir */
 }
 
 .book-section {
@@ -241,12 +243,12 @@ footer {
 /* RESPONSIVE DESIGN */
 @media (min-width: 1500px) { /* Appliquer ces styles pour les écrans plus larges que 1499px */
     .hero {
-        background-image: url('../Images/herobanner.png'); /* Image pour les écrans non-mobiles */
+        background-image: url('../images/herobanner.png'); /* Image pour les écrans non-mobiles */
     }
 }
 
 @media (max-width: 1499px) { /* Appliquer ces styles pour les écrans jusqu'à 1499px (mobiles et tablettes) */
     .hero {
-        background-image: url('../Images/herobackground.png'); /* Image pour les écrans mobiles et la plupart des tablettes */
+        background-image: url('../images/herobackground.png'); /* Image pour les écrans mobiles et la plupart des tablettes */
     }
 }
