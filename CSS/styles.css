@@ -120,12 +120,8 @@ main {
     font-size: 1.1rem;
     max-width: 800px;
     margin: 0 auto;
-    text-shadow:
-        -2px -2px 0 #000, /* Bordure plus épaisse */
-        2px -2px 0 #000, /* Bordure plus épaisse */
-        -2px 2px 0 #000, /* Bordure plus épaisse */
-        2px 2px 0 #000; /* Bordure plus épaisse */
-    color: #fff; /* Retour aux lettres blanches */
+    /* Suppression du text-shadow (contour noir) */
+    color: #000; /* Changement pour des lettres noires */
 }
 
 .book-section {
