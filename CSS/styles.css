@@ -69,13 +69,30 @@ main {
     align-items: center;
     justify-content: center;
     color: #fff; /* Le texte à l'intérieur de main sera blanc */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Ajoute une ombre au texte */
+    text-shadow:
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000,
+        -1px 0 0 #000,
+        1px 0 0 #000,
+        0 -1px 0 #000,
+        0 1px 0 #000; /* Ajoute une ombre noire épaisse autour du texte */
 }
 
 h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
     color: #fff; /* Le titre h1 sera blanc */
+    text-shadow:
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000,
+        -1px 0 0 #000,
+        1px 0 0 #000,
+        0 -1px 0 #000,
+        0 1px 0 #000; /* Ajoute une ombre noire épaisse autour du texte */
 }
 
 p {
@@ -83,6 +100,15 @@ p {
     max-width: 800px;
     margin: 0 auto;
     color: #fff; /* Le paragraphe p sera blanc */
+    text-shadow:
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000,
+        -1px 0 0 #000,
+        1px 0 0 #000,
+        0 -1px 0 #000,
+        0 1px 0 #000; /* Ajoute une ombre noire épaisse autour du texte */
 }
 
 /* Footer moderne */
