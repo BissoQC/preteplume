@@ -36,17 +36,42 @@ nav {
     padding: 0 1rem; /* Ajout de padding pour espacement */
 }
 
-nav ul {
-    list-style: none;
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ecf0f1;
+}
+
+.hamburger-menu {
+    display: none; /* Caché par défaut sur les écrans plus larges */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.hamburger-menu .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.nav-links {
     display: flex;
     gap: 1.5rem;
 }
 
-nav ul li {
+.nav-links li {
     display: inline;
 }
 
-nav ul li a {
+.nav-links li a {
     color: #ecf0f1;
     text-decoration: none;
     font-size: 1.1rem;
@@ -54,7 +79,7 @@ nav ul li a {
     transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
+.nav-links li a:hover {
     color: #f1c40f;
 }
 
@@ -63,7 +88,7 @@ main {
     flex: 1;
     padding: 2rem;
     text-align: center;
-    background: url('../Images/sitebackground.png') no-repeat center center/cover;
+    background: url('../Images/sitebackground.png') no-repeat left center/cover;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -78,6 +103,7 @@ main {
         1px 0 0 #000,
         0 -1px 0 #000,
         0 1px 0 #000; /* Ajoute une ombre noire épaisse autour du texte */
+    min-height: 100vh; /* Pour que l'arrière-plan couvre la hauteur sur mobile */
 }
 
 main h1 {
@@ -207,25 +233,57 @@ footer a:hover {
 
 /* Media Query pour les écrans de petite taille (mobiles) */
 @media (max-width: 768px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+    }
+
+    .nav-links {
+        display: none; /* Cache la navigation par défaut sur mobile */
+        position: absolute;
+        top: 60px; /* Ajustez en fonction de la hauteur de votre header */
+        left: 0;
+        background-color: #2c3e50;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        gap: 1rem;
+        z-index: 1001; /* Au-dessus du contenu principal */
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links.active {
+        display: flex; /* Affiche la navigation lorsque le menu est actif */
+    }
+
+    .nav-links li {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem 0;
+    }
+
+    .hamburger-menu {
+        display: flex; /* Affiche le menu hamburger sur mobile */
+    }
+
     main {
-        background-position: left center; /* Aligne le côté gauche de l'image */
         background-size: cover; /* Redimensionne pour couvrir tout l'élément */
-        min-height: 100vh; /* Assure que main occupe au moins la hauteur de l'écran */
-        display: flex;
-        flex-direction: column;
-        justify-content: center; /* Centre le contenu verticalement */
     }
+}
 
-    /* Ajustement pour éviter que le padding de main ne crée des espaces */
-    body {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh; /* S'assure que le body occupe toute la hauteur */
-    }
+/* Styles pour le menu hamburger actif */
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
 
-    /* Optionnel : Si vous avez d'autres éléments dans main qui causent un décalage */
-    main > * {
-        margin-top: auto;
-        margin-bottom: auto;
-    }
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
 }
