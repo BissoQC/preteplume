@@ -9,13 +9,14 @@ body {
 header {
     background-color: #000; /* Changement ici: noir */
     color: #fff;
-    padding: 1rem 2rem;
+    padding: 0.5rem 1rem; /* Réduction du padding header */
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: sticky;
     top: 0;
     z-index: 100;
+    overflow: hidden; /* Ajout pour potentiellement cacher le débordement */
 }
 
 .header-content {
@@ -28,15 +29,16 @@ header {
 .logo-container {
     display: flex;
     align-items: center;
+    margin-right: 1rem; /* Ajouter un peu d'espace à droite du logo */
 }
 
 .logo-container img {
-    max-height: 40px; /* Augmentation de la hauteur maximale du logo */
-    margin-right: 10px; /* Espacement entre le logo et le texte */
+    max-height: 30px; /* Réduire la hauteur maximale du logo sur mobile */
+    margin-right: 0.5rem; /* Réduire la marge à droite de l'image du logo */
 }
 
 .logo-text {
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Réduire la taille du texte du logo sur mobile (si vous l'utilisez) */
     font-weight: bold;
 }
 
@@ -68,6 +70,7 @@ nav a:hover {
     border: none;
     cursor: pointer;
     padding: 0;
+    margin-left: 1rem; /* Ajouter un peu d'espace à gauche du burger menu */
 }
 
 .hamburger-menu .bar {
@@ -91,7 +94,7 @@ nav a:hover {
 }
 
 main {
-    padding: 2rem;
+    padding: 1.5rem; /* Réduire le padding du main sur mobile */
 }
 
 .hero {
@@ -99,41 +102,41 @@ main {
     background-size: cover;
     background-position: center;
     color: #fff; /* Couleur du texte par défaut */
-    padding: 4rem 2rem;
+    padding: 3rem 1.5rem; /* Réduire le padding du hero sur mobile */
     text-align: center;
     border-radius: 8px;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem; /* Réduire la marge du bas du hero sur mobile */
 }
 
 .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 2rem; /* Réduire la taille du titre du hero sur mobile */
+    margin-bottom: 0.8rem; /* Réduire la marge du bas du titre du hero sur mobile */
     text-shadow:
-        -2px -2px 0 #000, /* Bordure plus épaisse pour le titre */
-        2px -2px 0 #000, /* Bordure plus épaisse pour le titre */
-        -2px 2px 0 #000, /* Bordure plus épaisse pour le titre */
-        2px 2px 0 #000; /* Bordure plus épaisse pour le titre */
-    color: #fff; /* Lettres blanches pour le titre */
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    color: #fff;
 }
 
 .hero p {
-    font-size: 1.1rem;
-    max-width: 800px;
-    margin: 0 auto;
+    font-size: 1rem; /* Conserver la taille du paragraphe du hero sur mobile */
+    max-width: 95%; /* Ajuster la largeur max du paragraphe du hero sur mobile */
+    margin: 0 auto 0.5rem; /* Réduire la marge du bas du paragraphe du hero sur mobile */
     text-shadow:
-        -1px -1px 0 #000, /* Bordure plus fine pour le paragraphe */
-        1px -1px 0 #000, /* Bordure plus fine pour le paragraphe */
-        -1px 1px 0 #000, /* Bordure plus fine pour le paragraphe */
-        1px 1px 0 #000; /* Bordure plus fine pour le paragraphe */
-    color: #fff; /* Lettres blanches pour le paragraphe */
+        -0.5px -0.5px 0 #000,
+        0.5px -0.5px 0 #000,
+        -0.5px 0.5px 0 #000,
+        0.5px 0.5px 0 #000;
+    color: #fff;
 }
 
 .book-section {
     display: flex;
-    gap: 2rem;
-    margin-bottom: 3rem;
+    gap: 1.5rem; /* Réduire le gap entre la couverture et le texte sur mobile */
+    margin-bottom: 2rem; /* Réduire la marge du bas des sections de livres sur mobile */
     background-color: #fff;
-    padding: 2rem;
+    padding: 1.5rem; /* Réduire le padding des sections de livres sur mobile */
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     align-items: center;
@@ -144,7 +147,7 @@ main {
 }
 
 .book-cover {
-    max-width: 200px;
+    max-width: 120px; /* Réduire la largeur max de la couverture sur mobile */
     flex-shrink: 0;
     border-radius: 4px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -163,24 +166,33 @@ main {
 
 .book-info h2 {
     margin-top: 0;
+    font-size: 1.1rem; /* Réduire la taille du titre du livre sur mobile */
     color: #2c3e50;
 }
 
 .book-info .tagline {
     color: #777;
     font-style: italic;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem; /* Réduire la marge du bas de la tagline sur mobile */
+    font-size: 0.8rem; /* Réduire la taille de la tagline sur mobile */
+}
+
+.book-info p {
+    font-size: 0.9rem; /* Réduire la taille du paragraphe du livre sur mobile */
+    line-height: 1.4; /* Ajuster la hauteur de ligne du paragraphe du livre sur mobile */
+    margin-bottom: 0.8rem; /* Réduire la marge du bas du paragraphe du livre sur mobile */
 }
 
 .amazon-button {
     display: inline-block;
-    padding: 0.8rem 1.5rem;
+    padding: 0.6rem 1rem; /* Réduire le padding du bouton Amazon sur mobile */
     background-color: #ff9900; /* Couleur Amazon */
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease;
+    font-size: 0.8rem; /* Réduire la taille de la police du bouton Amazon sur mobile */
 }
 
 .amazon-button:hover {
@@ -189,16 +201,17 @@ main {
 
 .about-section, .contact-section {
     background-color: #fff;
-    padding: 2rem;
+    padding: 1.5rem; /* Réduire le padding des sections à propos et contact sur mobile */
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem; /* Réduire la marge du bas des sections à propos et contact sur mobile */
     text-align: center;
 }
 
 .about-section h2, .contact-section h2 {
     color: #2c3e50;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem; /* Réduire la marge du bas des titres des sections à propos et contact sur mobile */
+    font-size: 1.3rem; /* Réduire la taille des titres des sections à propos et contact sur mobile */
 }
 
 .contact-section {
@@ -208,13 +221,14 @@ main {
 .contact-section a.amazon-button {
     /* Conserver les styles du bouton Amazon */
     display: inline-block;
-    padding: 0.8rem 1.5rem;
+    padding: 0.6rem 1rem;
     background-color: #ff9900;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease;
+    font-size: 0.8rem; /* Réduire la taille de la police du bouton contact sur mobile */
 }
 
 .contact-section a.amazon-button:hover {
@@ -225,8 +239,8 @@ footer {
     background-color: #000; /* Changement ici: noir */
     color: #fff;
     text-align: center;
-    padding: 1rem 0;
-    font-size: 0.9rem;
+    padding: 0.8rem 0; /* Réduire le padding du footer sur mobile */
+    font-size: 0.8rem; /* Réduire la taille de la police du footer sur mobile */
 }
 
 /* RESPONSIVE DESIGN */
@@ -251,6 +265,7 @@ footer {
         align-items: center;
         padding: 0.5rem 1rem;
         flex-direction: row;
+        overflow: hidden; /* Ajout pour potentiellement cacher le débordement */
     }
 
     .header-content {
@@ -262,10 +277,16 @@ footer {
 
     .logo-container {
         margin-bottom: 0;
+        margin-right: 0.5rem; /* Ajustement de la marge à droite du logo sur mobile */
     }
 
     .logo-container img {
         max-height: 30px;
+        margin-right: 0.25rem; /* Ajustement de la marge à droite de l'image du logo sur mobile */
+    }
+
+    .logo-text {
+        font-size: 1rem; /* Ajustement de la taille du texte du logo sur mobile */
     }
 
     nav ul {
@@ -292,7 +313,9 @@ footer {
     .hamburger-menu {
         display: flex;
         align-self: center;
-        margin-top: 0;
+        margin: 0; /* Supprimer toute marge potentielle */
+        padding: 0; /* Supprimer tout rembourrage potentiel */
+        margin-left: 0.5rem; /* Ajustement de la marge à gauche du burger menu sur mobile */
     }
 
     footer {
@@ -302,7 +325,8 @@ footer {
     .book-section {
         flex-direction: column;
         align-items: flex-start;
-        padding: 1.5rem;
+        padding: 1rem; /* Réduire encore le padding des sections de livres sur mobile */
+        gap: 1rem; /* Réduire encore le gap entre la couverture et le texte sur mobile */
     }
 
     .book-section.alternate {
@@ -310,25 +334,46 @@ footer {
     }
 
     .book-cover {
-        max-width: 150px;
-        margin-bottom: 1rem;
+        max-width: 100px; /* Réduire encore la largeur max de la couverture sur mobile */
+        margin-bottom: 0.5rem; /* Réduire la marge du bas de la couverture sur mobile */
     }
 
     .book-info h2 {
-        font-size: 1.3rem;
+        font-size: 1rem; /* Réduire encore la taille du titre du livre sur mobile */
     }
 
     .book-info .tagline {
-        font-size: 0.9rem;
+        font-size: 0.7rem; /* Réduire encore la taille de la tagline sur mobile */
+        margin-bottom: 0.2rem; /* Réduire encore la marge du bas de la tagline sur mobile */
     }
 
     .book-info p {
-        font-size: 1rem;
-        line-height: 1.5;
+        font-size: 0.8rem; /* Réduire encore la taille du paragraphe du livre sur mobile */
+        line-height: 1.3; /* Ajuster encore la hauteur de ligne du paragraphe du livre sur mobile */
+        margin-bottom: 0.5rem; /* Réduire encore la marge du bas du paragraphe du livre sur mobile */
     }
 
     .amazon-button {
-        font-size: 0.9rem;
-        padding: 0.6rem 1rem;
+        font-size: 0.7rem; /* Réduire encore la taille de la police du bouton Amazon sur mobile */
+        padding: 0.5rem 0.8rem; /* Réduire encore le padding du bouton Amazon sur mobile */
+    }
+
+    .about-section h2, .contact-section h2 {
+        font-size: 1.1rem; /* Réduire encore la taille des titres des sections à propos et contact sur mobile */
+        margin-bottom: 0.5rem; /* Réduire encore la marge du bas des titres des sections à propos et contact sur mobile */
+    }
+
+    .about-section p, .contact-section p {
+        font-size: 0.9rem; /* Réduire la taille du texte des sections à propos et contact sur mobile */
+    }
+
+    .contact-section a.amazon-button {
+        font-size: 0.7rem; /* Réduire encore la taille de la police du bouton contact sur mobile */
+        padding: 0.5rem 0.8rem; /* Réduire encore le padding du bouton contact sur mobile */
+    }
+
+    footer {
+        padding: 0.6rem 0; /* Réduire encore le padding du footer sur mobile */
+        font-size: 0.7rem; /* Réduire encore la taille de la police du footer sur mobile */
     }
 }
