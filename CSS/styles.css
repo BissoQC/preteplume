@@ -246,33 +246,42 @@ footer {
 @media (max-width: 768px) {
     header {
         width: 100%;
-        display: flex; /* Revenir à une disposition flex pour aligner logo et hamburger */
-        justify-content: space-between; /* Espacer le logo et le hamburger */
-        align-items: center; /* Les aligner verticalement au centre */
-        padding: 0.5rem 1rem; /* Réduire encore le padding */
-        flex-direction: row; /* S'assurer que le logo et le hamburger sont sur la même ligne */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        flex-direction: row;
     }
 
     .header-content {
-        flex-direction: row; /* Aligner le logo et la navigation (avant que le JS ne les sépare) */
+        flex-direction: row;
         align-items: center;
-        justify-content: space-between; /* Espacer le logo et la nav */
+        justify-content: space-between;
         width: 100%;
     }
 
     .logo-container {
-        margin-bottom: 0; /* Supprimer la marge du bas */
+        margin-bottom: 0;
     }
 
     .logo-container img {
-        max-height: 30px; /* Réduire la hauteur maximale du logo sur mobile */
+        max-height: 30px;
     }
 
     nav ul {
+        display: none; /* Masquer la navigation par défaut sur mobile */
         flex-direction: column;
         gap: 0.5rem;
         width: 100%;
-        margin-top: 0.5rem; /* Réduire l'espace entre le logo et la navigation quand ouverte */
+        margin-top: 0.5rem;
+    }
+
+    nav ul.active {
+        display: flex; /* Afficher la navigation lorsque la classe 'active' est présente */
+    }
+
+    nav li {
+        width: 100%;
     }
 
     nav a {
@@ -282,8 +291,8 @@ footer {
 
     .hamburger-menu {
         display: flex;
-        align-self: center; /* Aligner verticalement au centre */
-        margin-top: 0; /* Supprimer la marge du haut */
+        align-self: center;
+        margin-top: 0;
     }
 
     footer {
