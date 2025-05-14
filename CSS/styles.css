@@ -245,78 +245,81 @@ footer {
 /* RESPONSIVE DESIGN POUR LES ÉCRANS MOBILES */
 @media (max-width: 768px) {
     header {
-        width: 100%; /* S'assurer que le header prend toute la largeur */
-        flex-direction: column; /* Empiler le logo et la navigation */
-        align-items: flex-start; /* Aligner à gauche sur mobile */
-        padding: 1rem; /* Réduire le padding sur mobile */
+        width: 100%;
+        display: flex; /* Revenir à une disposition flex pour aligner logo et hamburger */
+        justify-content: space-between; /* Espacer le logo et le hamburger */
+        align-items: center; /* Les aligner verticalement au centre */
+        padding: 0.5rem 1rem; /* Réduire encore le padding */
+        flex-direction: row; /* S'assurer que le logo et le hamburger sont sur la même ligne */
     }
 
     .header-content {
-        flex-direction: column; /* Empiler le logo et la navigation */
-        align-items: flex-start; /* Aligner à gauche sur mobile */
-        width: 100%; /* S'assurer que le contenu prend toute la largeur */
+        flex-direction: row; /* Aligner le logo et la navigation (avant que le JS ne les sépare) */
+        align-items: center;
+        justify-content: space-between; /* Espacer le logo et la nav */
+        width: 100%;
     }
 
     .logo-container {
-        margin-bottom: 1rem; /* Ajouter de l'espace sous le logo */
+        margin-bottom: 0; /* Supprimer la marge du bas */
+    }
+
+    .logo-container img {
+        max-height: 30px; /* Réduire la hauteur maximale du logo sur mobile */
     }
 
     nav ul {
-        flex-direction: column; /* Afficher les liens de navigation en colonne */
-        gap: 0.5rem; /* Réduire l'espacement entre les liens */
-        width: 100%; /* Prendre toute la largeur */
-        margin-top: 1rem; /* Ajouter un peu d'espace entre le logo et la navigation */
-    }
-
-    nav li {
-        width: 100%; /* Chaque élément de la liste prend toute la largeur */
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+        margin-top: 0.5rem; /* Réduire l'espace entre le logo et la navigation quand ouverte */
     }
 
     nav a {
-        display: block; /* Rendre les liens block pour qu'ils prennent toute la largeur de leur parent */
-        padding: 0.5rem 0; /* Ajouter un peu de padding vertical aux liens */
+        display: block;
+        padding: 0.5rem 0;
     }
 
     .hamburger-menu {
-        display: flex; /* Afficher le menu hamburger sur mobile */
-        align-self: flex-end; /* Aligner le menu hamburger à droite */
-        margin-top: -3rem; /* Ajuster la marge pour le positionner correctement */
+        display: flex;
+        align-self: center; /* Aligner verticalement au centre */
+        margin-top: 0; /* Supprimer la marge du haut */
     }
 
     footer {
-        width: 100%; /* S'assurer que le footer prend toute la largeur */
+        width: 100%;
     }
 
     .book-section {
-        flex-direction: column; /* Empiler la couverture et le texte */
-        align-items: flex-start; /* Aligner le contenu à gauche */
-        padding: 1.5rem; /* Réduire légèrement le rembourrage */
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem;
     }
 
     .book-section.alternate {
-        flex-direction: column; /* S'assurer que la disposition alternate est aussi en colonne */
+        flex-direction: column;
     }
 
     .book-cover {
-        max-width: 150px; /* Réduire la largeur de la couverture sur mobile */
-        margin-bottom: 1rem; /* Ajouter un espace sous la couverture */
+        max-width: 150px;
+        margin-bottom: 1rem;
     }
 
     .book-info h2 {
-        font-size: 1.3rem; /* Réduire légèrement la taille du titre */
+        font-size: 1.3rem;
     }
 
     .book-info .tagline {
-        font-size: 0.9rem; /* Réduire légèrement la taille de l'accroche */
+        font-size: 0.9rem;
     }
 
     .book-info p {
-        font-size: 1rem; /* Réduire légèrement la taille du paragraphe */
-        line-height: 1.5; /* Améliorer la lisibilité du texte */
+        font-size: 1rem;
+        line-height: 1.5;
     }
 
     .amazon-button {
-        font-size: 0.9rem; /* Réduire légèrement la taille du bouton */
-        padding: 0.6rem 1rem; /* Réduire le rembourrage du bouton */
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
     }
 }
