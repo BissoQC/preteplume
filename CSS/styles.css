@@ -244,6 +244,14 @@ footer {
 
 /* RESPONSIVE DESIGN POUR LES ÉCRANS MOBILES */
 @media (max-width: 768px) {
+    header {
+        width: 100%; /* S'assurer que le header prend toute la largeur */
+    }
+
+    footer {
+        width: 100%; /* S'assurer que le footer prend toute la largeur */
+    }
+
     .book-section {
         flex-direction: column; /* Empiler la couverture et le texte */
         align-items: flex-start; /* Aligner le contenu à gauche */
